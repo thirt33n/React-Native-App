@@ -1,44 +1,38 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Image, StyleSheet, Text, View, TextInput } from 'react-native';    //CSS stuff is imported here
-import { ImageBackground } from 'react-native-web';
-import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
+import { Image, StyleSheet, Text, View, TextInput} from 'react-native';    //CSS stuff is imported here
+import Username from './components/inputFields';
+import Password from './components/passwordField';
+import SubmitButton from './components/button';
+
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text style={{color: 'blue'}}>Hi my  is Siddharth P, 20BLC1071 and this is my first app</Text>
-      <Image
-      source = {{
-          uri: 'https://reactnative.dev/docs/assets/p_cat2.png',
-        }}
-        style={{width: 200, height: 200}}
-      />
-      <StatusBar style="auto" />
-      <View style={styles.container2}>
-        <TextInput
-          placeholder = "Input text here"
-          keyboardType='numeric'
-        />
+    return (
+      <View styles={styles.container}>
+        <Username />
+        <Password />
+        <SubmitButton />
       </View>
-    </View>
-  
-  );
-}
+    );
+  }
+
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    flexDirection: 'column',
+    backgroundColor:'rgba(79, 81, 140, 1.0)',
+    margin: 10,
+    alignSelf: 'stretch',
+    },
+
+  text1: {
+    flex: 1,
+    fontSize: 500,
+    backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  text1: {
     color: 'blue'
   },
-  container2: {
-    color: 'black',
-    backgroundColor: 'white',
-    width: 100
-  },
+
 });

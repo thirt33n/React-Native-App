@@ -9,9 +9,12 @@ import SubmitButton from './components/button';
 export default function App() {
     return (
       <View styles={styles.container}>
-        <Username />
-        <Password />
-        <SubmitButton />
+        <Text style={{marginTop:70,fontSize:50,textDecorationLine: 'underline'}}>The Login Page .</Text>
+        <View style={{marginTop:-50,}}>
+          <Username />
+          <Password />
+          <SubmitButton />
+        </View>
       </View>
     );
   }
@@ -19,20 +22,10 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     flexDirection: 'column',
-    backgroundColor:'rgba(79, 81, 140, 1.0)',
     margin: 10,
     alignSelf: 'stretch',
     },
 
-  text1: {
-    flex: 1,
-    fontSize: 500,
-    backgroundColor: 'black',
-    alignItems: 'center',
-    justifyContent: 'center',
-    color: 'blue'
-  },
 
 });
